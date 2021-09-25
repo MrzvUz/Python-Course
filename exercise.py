@@ -12,6 +12,7 @@ friends = [("Rolf", 25), ("Anne", 21), ("Charlie", 35)]
 for name, age in friends:
     print(f"{name} is {age} years old.")
 
+
 # Dictionary and for loops.
 friends ={"Rolf": 25, "Anne": 21, "Charlie": 35}
 for name in friends.values(): # to get just values of the dict.
@@ -21,6 +22,7 @@ friends ={"Rolf": 25, "Anne": 21, "Charlie": 35}
 for name, age in friends.items(): # to get keys and values.
     print(f"{name} is {age} years old")
 
+
 # Checking for prime numbbers.
 for n in range(2, 10):
     for x in range(2, n):
@@ -29,6 +31,7 @@ for n in range(2, 10):
             break
     else:
         print(f"{n} is prime numver.")
+
 
 # List comprehension.
 numbers = [1, 2, 3, 4, 5]
@@ -40,12 +43,14 @@ for  number in numbers:
 doubled_number = [number * 2 for number in range(2, 11)]
 print(doubled_number)
 
+
 # List comprehension to check a friend in the list with title casing.
 friend = input("Enter your friend's name: ")
 friends = ["Rolf", "Anne", "Ali", "Hoji"]
 friends_lower = [name.lower() for name in friends]
 if friend.lower() in friends_lower:
     print(f"Your friend {friend.title()} is here.")
+
 
 # if statement in list comprehensions.
 friends = ["rolf", "Anne", "Ali", "Hoji", "charlie"]
@@ -59,6 +64,7 @@ present_guests = [
 ]
 print(present_guests)
 
+
 # Dictionary Comprehensions.
 friends = ["Anne", "Ali", "Hoji", "Yahya"]
 last_seen = [2, 5, 15, 8]
@@ -68,3 +74,11 @@ long_timers = {
     if last_seen[i] > 5
 }
 print(long_timers)
+
+
+# zip function to create dictionary from two lists.
+friends = ["Anne", "Ali", "Hoji", "Yahya"]
+last_seen = [2, 5, 15, 8]
+
+dict_version = dict(zip(friends, last_seen))
+print(dict_version)
