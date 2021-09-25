@@ -46,3 +46,15 @@ friends = ["Rolf", "Anne", "Ali", "Hoji"]
 friends_lower = [name.lower() for name in friends]
 if friend.lower() in friends_lower:
     print(f"Your friend {friend.title()} is here.")
+
+# if statement in list comprehensions.
+friends = ["rolf", "Anne", "Ali", "Hoji", "charlie"]
+guests = ["Anne", "bob", "Ali", "james"]
+
+friends_lower = [f.lower() for f in friends]
+present_guests = [
+    name.title()
+    for name in guests
+    if name.lower() in friends_lower
+]
+print(present_guests)
