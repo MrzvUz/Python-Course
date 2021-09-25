@@ -1,10 +1,10 @@
 # While loop
-# is_learning =  True
+is_learning =  True
 
-# while is_learning:
-#     print("You're learning")
-#     user_input = input("Are you still learning?: ")
-#     is_learning = user_input == "yes"
+while is_learning:
+    print("You're learning")
+    user_input = input("Are you still learning?: ")
+    is_learning = user_input == "yes"
 
 
 # Destructuring in for loop.
@@ -58,3 +58,13 @@ present_guests = [
     if name.lower() in friends_lower
 ]
 print(present_guests)
+
+# Dictionary Comprehensions.
+friends = ["Anne", "Ali", "Hoji", "Yahya"]
+last_seen = [2, 5, 15, 8]
+long_timers = {
+    friends[i]: last_seen[i]
+    for i in range(len(friends))
+    if last_seen[i] > 5
+}
+print(long_timers)
