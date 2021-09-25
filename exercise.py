@@ -1,42 +1,48 @@
-def hundred_num():
-    num = []
-    i = 0
-    while i < 100:
-        num.append(i)
-        i += 1
-    return num
-print(hundred_num())
-print([x * 2 for x in hundred_num()])
+# While loop
+# is_learning =  True
+
+# while is_learning:
+#     print("You're learning")
+#     user_input = input("Are you still learning?: ")
+#     is_learning = user_input == "yes"
 
 
+# Destructuring in for loop.
+friends = [("Rolf", 25), ("Anne", 21), ("Charlie", 35)]
+for name, age in friends:
+    print(f"{name} is {age} years old.")
 
-def hundred_num2():
-    i = 0
-    while i < 100:
-        yield i
-        i += 1
+# Dictionary and for loops.
+friends ={"Rolf": 25, "Anne": 21, "Charlie": 35}
+for name in friends.values(): # to get just values of the dict.
+    print(name)
 
-print(hundred_num2())
-print([x * 2 for x in hundred_num2()])
+friends ={"Rolf": 25, "Anne": 21, "Charlie": 35}
+for name, age in friends.items(): # to get keys and values.
+    print(f"{name} is {age} years old")
 
+# Checking for prime numbbers.
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(f"{n} quals {x} * {n//x}")
+            break
+    else:
+        print(f"{n} is prime numver.")
 
+# List comprehension.
+numbers = [1, 2, 3, 4, 5]
+doubled_number = []
+for  number in numbers:
+    doubled_number.append(number * 2)
+    print(doubled_number)
+    
+doubled_number = [number * 2 for number in range(2, 11)]
+print(doubled_number)
 
-"""
-Take a look at the code in the problem description where we test if a number is prime.
-Refactor the code and put it into the function below to turn the prime_generator() function into a generator.
-
-Implement your generator so that others can get a prime number generator like this:
-
-g = prime_generator(100)    # g can generate prime numbers under 100
-next(g) # get next prime like this
-
-Reminder: you don't need to change the function name nor the argument
-"""
-
-def prime_generator(bound):
-    for n in range(2, bound):   # n starts from 2 to bound
-        for x in range(2, n):   # check if there is a number x (1<x<n) that can divide n
-            if n % x == 0:  # as long as we can find any such x, then n is not prime
-                break
-        else:   # if no such x is found after exhausting all 1<x<n
-            yield n     # generate this prime
+# List comprehension to check a friend in the list with title casing.
+friend = input("Enter your friend's name: ")
+friends = ["Rolf", "Anne", "Ali", "Hoji"]
+friends_lower = [name.lower() for name in friends]
+if friend.lower() in friends_lower:
+    print(f"Your friend {friend.title()} is here.")
