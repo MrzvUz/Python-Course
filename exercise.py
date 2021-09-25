@@ -76,9 +76,32 @@ long_timers = {
 print(long_timers)
 
 
-# zip function to create dictionary from two lists.
+# zip function to create dictionary and lists from two lists.
 friends = ["Anne", "Ali", "Hoji", "Yahya"]
 last_seen = [2, 5, 15, 8]
 
-dict_version = dict(zip(friends, last_seen))
+dict_version = dict(zip(friends, last_seen)) # Turns to a dictionary.
+dict_version = list(zip(friends, last_seen)) # Turns to a zipped lists.
 print(dict_version)
+
+
+# The enumerate function in python.
+friends = ["Anne", "Ali", "Hoji", "Yahya"]
+counter = 0
+for friend in friends:
+    print(counter)
+    print(friend)
+    counter = counter + 1
+
+# better enumerate version
+friends = ["Anne", "Ali", "Hoji", "Yahya"]
+for friend, counter in enumerate(friends):
+    print(counter)
+    print(friend)
+
+friends = ["Anne", "Ali", "Hoji", "Yahya"]
+list_of_friends = list(enumerate(friends)) # Turning to enumerated list.
+print(list_of_friends)
+
+dict_of_friends = dict(enumerate(friends)) # Turning to enumerated dictionary.
+print(dict_of_friends)
