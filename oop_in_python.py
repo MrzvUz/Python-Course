@@ -12,7 +12,7 @@ print(avarage_grade(my_student))
 
 class Student:
     def __init__(self, new_name, new_grades):
-        self.name = new_name
+        self.name = new_name # name is not variable, it is a property of self. Creating name property inside self.
         self.grades = new_grades
 
 
@@ -26,3 +26,14 @@ print(student_one.name) # student_one becomes an object and name becomes propert
 print(student_one.grades) # student_one becomes an object and grades becomes property.
 print(student_one.avarage()) # avarage becomes a method.
 print(Student.avarage(student_one)) # In the background class Student runs avarage method and passes student_one object inside the brackets.
+
+
+class Movie:
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
+
+matrix = Movie("The Matrix", 1999) # Assigning the to a matrix variable
+print(matrix.name)
+print(matrix.year)
+print(Movie("The Matrix", 1999).name) # Calling class without assigning a variable
