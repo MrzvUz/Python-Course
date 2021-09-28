@@ -21,6 +21,6 @@ class Student:
 
 
 student_one = Student("Rolf Smith", [70, 88, 90, 99])
-print(student_one.name)
-print(student_one.grades)
-print(student_one.avarage())
+print(student_one.name) # student_one becomes an object and name becomes property.
+print(student_one.grades) # student_one becomes an object and grades becomes property.
+print(student_one.avarage()) # avarage becomes a method.
