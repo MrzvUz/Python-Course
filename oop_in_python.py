@@ -51,8 +51,15 @@ class Garage:
     def __getitem__(self, i):
         return self.cars[i]
 
+    def __repr__(self):
+        return f"<Garage {self.cars}>" # for code oriented description.
+
+    def __str__(self):
+        return f"Garage with {len(self)} cars." # for user oriented description.
+
 ford = Garage()
 ford.cars.append("Fiesta")
 ford.cars.append("BMW")
 
 print(ford[0]) # Garage.__getitem__(ford, 0) is passing the same print function.
+print(ford)
