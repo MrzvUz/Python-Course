@@ -37,3 +37,22 @@ matrix = Movie("The Matrix", 1999) # Assigning the to a matrix variable
 print(matrix.name)
 print(matrix.year)
 print(Movie("The Matrix", 1999).name) # Calling class without assigning a variable
+
+
+# Dunder "Magic" methods in Python.
+
+class Garage:
+    def __init__(self):
+        self.cars = []
+
+    def  __len__(self):
+        return len(self.cars)
+
+    def __getitem__(self, i):
+        return self.cars[i]
+
+ford = Garage()
+ford.cars.append("Fiesta")
+ford.cars.append("BMW")
+
+print(ford[0]) # Garage.__getitem__(ford, 0) is passing the same print function.
