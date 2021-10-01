@@ -62,7 +62,7 @@ print(student_details.average())
 
 class WorkingStudent(Student):
     def __init__(self, name, school, salary):
-        super().__init__(name, school) # super is a parent class which is Student
+        super().__init__(name, school) # super() is a parent class which is Student
         self.salary = salary
     
     def weekly_salary(self):
@@ -77,6 +77,3 @@ rolf.marks.append(88)
 rolf.marks.append(99)
 print(rolf.average())
 print(rolf.weekly_salary())
-
-
-
