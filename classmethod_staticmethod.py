@@ -74,7 +74,7 @@ print(money)
 print("--------------------------------------------")
 
 
-# Better example with @classmethod.
+# Better example with @classmethod and @classmethod better than @staticmethod.
 
 class FixedFloat:
     def __init__(self, amount):
