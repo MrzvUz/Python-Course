@@ -17,7 +17,7 @@ class Garage:
     def add_car(self, car):
         if not isinstance(car, Car):
             raise TypeError(
-                f"Tried to add a '{car,__class__.__name__}' to the garage, but you can only add an object")
+                f"Tried to add a '{car,__class__.__name__}' to the garage, but you can only add 'Car' object")
         self.cars.append(car)
 
 
