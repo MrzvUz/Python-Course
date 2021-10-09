@@ -1,4 +1,4 @@
-class RunTimeErrorWithCode(TypeError):
+class RunTimeErrorWithCode(Exception):
     # This message in multi quotes called dockstring.
     """
     Exception raised when a specific error code is needed.
