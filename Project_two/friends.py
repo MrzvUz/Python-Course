@@ -1,4 +1,4 @@
-from os import popen
+from os import open
 
 
 friends = input(
