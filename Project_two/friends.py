@@ -15,3 +15,4 @@ people_nearby_set = set(people_nearby)
 friends_nearby_set = friends_set.intersection(people_nearby_set)
 
 nearby_friends_file = open("nearby_friends.txt", "w")
+
